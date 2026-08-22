@@ -9,7 +9,13 @@ Native xAI（Grok / X 订阅）OAuth 登录插件 for DeepSeek Harness。
 
 ## 安装
 
-从 GitHub 安装（无需 npm）：
+从 npm 安装（推荐）：
+
+```sh
+dsh plugin --profile web add dsh-xai-oauth
+```
+
+或从 GitHub 安装：
 
 ```sh
 dsh plugin --profile web add github:tonylee2022/dsh-xai-oauth
@@ -20,8 +26,6 @@ dsh plugin --profile web add github:tonylee2022/dsh-xai-oauth
 ```sh
 dsh plugin --profile web add ./dsh-xai-oauth
 ```
-
-> 发布到 npm 后也可直接 `dsh plugin --profile web add dsh-xai-oauth`。
 
 然后重启 web profile（`dsh --profile web`）。重启后在 **设置 → 模型提供方**
 旁会出现 **xAI（Grok/X）** 设置页：点击“登录 xAI”→ 复制用户码 →
