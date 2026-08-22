@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Secrets / tokens — never commit OAuth tokens or keys
+*.json.tmp
+xai-oauth.json
+.env
+.env.*
+!*.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
