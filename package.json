@@ -1,8 +1,16 @@
 {
   "name": "dsh-xai-oauth",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "xAI (Grok/X subscription) OAuth login plugin for DeepSeek Harness",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonylee2022/dsh-xai-oauth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tonylee2022/dsh-xai-oauth/issues"
+  },
+  "homepage": "https://github.com/tonylee2022/dsh-xai-oauth#readme",
   "keywords": [
     "deepseek-harness",
     "dsh-plugin",
