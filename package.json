@@ -1,6 +1,6 @@
 {
   "name": "dsh-xai-oauth",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "xAI (Grok/X subscription) OAuth login plugin for DeepSeek Harness",
   "license": "MIT",
   "repository": {
