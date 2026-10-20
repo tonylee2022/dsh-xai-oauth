@@ -1,6 +1,6 @@
 {
   "name": "dsh-xai-oauth",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "xAI (Grok/X subscription) OAuth login plugin for DeepSeek Harness",
   "license": "MIT",
   "repository": {
@@ -20,6 +20,9 @@
     "supergrok"
   ],
   "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
@@ -28,6 +31,7 @@
   },
   "files": [
     "lib/index.js",
+    "lib/origin.js",
     "client.js",
     "cordis.patch.yml",
     "README.md",

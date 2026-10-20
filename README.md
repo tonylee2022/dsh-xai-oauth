@@ -31,6 +31,13 @@ dsh plugin --profile web add ./dsh-xai-oauth
 旁会出现 **xAI（Grok/X）** 设置页：点击“登录 xAI”→ 复制用户码 →
 点“打开授权页”在 xAI 官方页面登录并批准 → 自动完成授权。
 
+## 兼容性
+
+- `dsh web` / 普通浏览器：页面 origin 是 `http://127.0.0.1:<port>`。
+- DSH Desktop 0.2.1 起：Web UI 从特权 scheme `dsh-app://app` 加载，页面
+  fetch 本机控制服务时带的是这个 origin。**0.1.5 起接受该 origin**；
+  更早的版本会因 CORS 预检被拒而在登录时显示 “Failed to fetch”。
+
 ## 原理
 
 1. 插件向 `https://auth.x.ai/oauth2/device/code` 申请设备码（客户端 id 与
@@ -55,8 +62,9 @@ dsh plugin --profile web add ./dsh-xai-oauth
 ## 安全边界
 
 - 令牌只保存在 Host 侧文件（owner-only 权限）；Web 页面不接触令牌。
-- 本机控制服务只监听 `127.0.0.1:1457`，仅接受本地 DSH Web origin；
-  登出请求带 CSRF token。
+- 本机控制服务只监听 `127.0.0.1:1457`，仅接受本地 DSH Web origin
+  （`http://127.0.0.1:*`、`http://localhost:*`、`http://[::1]:*`，以及
+  DSH Desktop 的 `dsh-app://app`）；登出请求带 CSRF token。
 - access token 等效于该订阅的 API 凭据，请勿外泄。
 
 ## License
